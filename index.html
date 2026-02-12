@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agency Agent Comparator</title>
+
+  <!-- Premium Fonts -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Chart JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    
+    <h1>📊 Agency Agent Count Comparator</h1>
+
+    <!-- TOP CONTROLS -->
+    <div class="topbar">
+      <input type="text" id="search" placeholder=" 🔎︎ Search Agency..." />
+      <button onclick="downloadCSV()"> 🗁 Download CSV</button>
+      <button onclick="toggleTheme()">🌗 Toggle Theme</button>
+    </div>
+
+    <!-- INPUT PANELS -->
+    <div class="panels">
+
+      <div class="panel">
+        <h3>Day 1 JSON</h3>
+        <textarea id="day1" placeholder=" Paste Day 1 JSON here..."></textarea>
+      </div>
+
+      <div class="compare-center">
+        <button class="compare-btn" onclick="compareJSON()"> COMPARE </button>
+      </div>
+
+
+      <div class="panel">
+        <h3>Day 2 JSON</h3>
+        <textarea id="day2" placeholder="Paste Day 2 JSON here..."></textarea>
+      </div>
+
+    </div>
+
+    <!-- RESULT TABLE -->
+    <div class="table-card">
+      <h2>Difference Table (Descending by change)</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Agency</th>
+            <th>Day 1</th>
+            <th>Day 2</th>
+            <th>Difference</th>
+          </tr>
+        </thead>
+        <tbody id="resultBody"></tbody>
+      </table>
+    </div>
+
+    <!-- CHART -->
+    <div class="chart-card">
+      <h2>Top 20 Changes Chart</h2>
+      <canvas id="chart"></canvas>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
