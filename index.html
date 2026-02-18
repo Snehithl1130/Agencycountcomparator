@@ -1,23 +1,15 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Agency Agent Comparator</title>
-
-  <!-- Premium Fonts -->
 
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap"
     rel="stylesheet">
-
-  <!-- Chart JS -->
-
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -25,40 +17,34 @@
 
   <div class="container">
 
-    
-    <h1>📊 Agency Agent Count Comparator</h1>
+    <h1>Agency Agent Count Comparator</h1>
 
-    <!-- TOP CONTROLS -->
     <div class="topbar">
-      <input type="text" id="search" placeholder=" 🔎︎ Search Agency..." />
-      <button onclick="downloadCSV()"> 🗁 Download CSV</button>
-      <button onclick="toggleTheme()">🌗 Toggle Theme</button>
+      <input type="text" id="search" placeholder="Search Agency..." />
+      <button onclick="downloadCSV()">Download CSV</button>
+      <button onclick="toggleTheme()">Toggle Theme</button>
     </div>
 
-    <!-- INPUT PANELS -->
     <div class="panels">
 
       <div class="panel">
         <h3>Day 1 JSON</h3>
-        <textarea id="day1" placeholder=" Paste Day 1 JSON here..."></textarea>
+        <textarea id="day1"></textarea>
       </div>
 
       <div class="compare-center">
-        <button class="compare-btn" onclick="compareJSON()"> COMPARE </button>
+        <button class="compare-btn" onclick="compareJSON()">Compare Now</button>
       </div>
-
 
       <div class="panel">
         <h3>Day 2 JSON</h3>
-        <textarea id="day2" placeholder="Paste Day 2 JSON here..."></textarea>
+        <textarea id="day2"></textarea>
       </div>
 
     </div>
 
-    <!-- RESULT TABLE -->
     <div class="table-card">
-      <h2>Difference Table (Descending by change)</h2>
-
+      <h2>Difference Table</h2>
       <table>
         <thead>
           <tr>
@@ -72,16 +58,14 @@
       </table>
     </div>
 
-    <!-- CHART -->
     <div class="chart-card">
-      <h2>Top 20 Changes Chart</h2>
+      <h2>Top Changes Chart</h2>
       <canvas id="chart"></canvas>
     </div>
 
   </div>
 
   <script src="script.js"></script>
-
 </body>
 
 </html>
