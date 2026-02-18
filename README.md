@@ -34,6 +34,5 @@ Useful for:
 - Operations teams  
 - Insurance reporting  
 - Workforce tracking  
-- Daily SLA monitoring  
 - Data comparison tasks  
 
